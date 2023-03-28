@@ -6,6 +6,7 @@ export { default as Book } from "./Book";
 export { default as Door } from "./Door";
 export { default as Group } from "./Group";
 export { default as Location } from "./Location";
+export { default as Menu } from "./Menu";
 export { default as News } from "./News";
 export { default as Teacher } from "./Teacher";
 export { default as User } from "./User";

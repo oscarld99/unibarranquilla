@@ -32,3 +32,4 @@ com.unibarranquilla.app-debug-30 C:\Users\Imagemaker\Documents\PERSONAL\PROYECTO
 com.unibarranquilla.app-main-31 C:\Users\Imagemaker\Documents\PERSONAL\PROYECTO ITSA\unibarranquilla\android\app\src\main\res
 com.unibarranquilla.app-packaged_res-32 C:\Users\Imagemaker\Documents\PERSONAL\PROYECTO ITSA\unibarranquilla\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
 com.unibarranquilla.app-packaged_res-33 C:\Users\Imagemaker\Documents\PERSONAL\PROYECTO ITSA\unibarranquilla\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.unibarranquilla.app-packaged_res-34 C:\Users\Imagemaker\Documents\PERSONAL\PROYECTO ITSA\unibarranquilla\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug

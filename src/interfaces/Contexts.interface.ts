@@ -18,3 +18,15 @@ export interface SigninProps {
   userName: string;
   password: string;
 }
+
+export interface DefaultValueMenuContext {
+  activeScreen: string
+  arrowBack: boolean
+  open: boolean
+  paramsActiveScreen: { [x: string]: any }
+  prevScreen: string
+  state?: DefaultValueMenuContext
+  onBack: () => void
+  onChangeScreen: (screen: string) => void
+  onTouchMenu: () => void
+}
