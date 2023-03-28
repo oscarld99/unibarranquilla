@@ -1,15 +1,25 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "strict": true,
+    "baseUrl": "src",
     "paths": {
-      "*": [
-        "src/*"
-      ],
-      "tests": [
-        "tests/*"
+      "@assets/*": [
+        "assets/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "components/*"
+      ],
+      "@Constants/*": [
+        "Constants/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
+      "@interfaces/*": [
+        "interfaces/*"
+      ],
+      "@screens/*": [
+        "screens/*"
       ],
     },
   },

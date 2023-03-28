@@ -1,0 +1,12 @@
+export { default as ArrowDown } from "./ArrowDown";
+export { default as ArrowLeft } from "./ArrowLeft";
+export { default as ArrowRight } from "./ArrowRight";
+export { default as ArrowUp } from "./ArrowUp";
+export { default as Book } from "./Book";
+export { default as Door } from "./Door";
+export { default as Group } from "./Group";
+export { default as Location } from "./Location";
+export { default as News } from "./News";
+export { default as Teacher } from "./Teacher";
+export { default as User } from "./User";
+export { default as University } from "./University";

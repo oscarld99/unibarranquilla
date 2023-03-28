@@ -1,0 +1,6 @@
+export { default as CardNews } from './CardNews/CardNews'
+export { default as CardPrograms } from './CardPrograms/CardPrograms'
+export { default as CardUser } from './CardUser/CardUser'
+export { default as List } from './List/List'
+export { default as Module } from './Module/Module'
+export { default as ButtonImage } from './ButtonImage/ButtonImage'
