@@ -1,36 +1,24 @@
 /* eslint-disable prettier/prettier */
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
 import { Text, TouchableOpacity, View } from 'react-native'
-import { ArrowLeft, Menu as MenuIcon } from 'components/icons'
+import { Menu as MenuIcon } from 'components/icons'
 import { COLORS_APP } from '@Constants/colors'
 import styles from './Menu.styles'
-import { MenuContext } from '@contexts/MenuContext'
+import SideBar from '@components/SideBar'
 
-const Menu = () => {
+const Menu = ({ tittle }: { tittle: string }) => {
 
-
-    const {
-        activeScreen,
-        onBack,
-        onTouchMenu
-    } = useContext(MenuContext);
-
-    //console.log(activeScreen, state)
+    const [openSideBar, setOpenSideBar] = useState(false)
 
     return (
-        <View style={styles.menu__body}>
-            {
-                true ? (
-                    <TouchableOpacity onPress={onBack}>
-                        <MenuIcon color={COLORS_APP.WHITE} />
-                    </TouchableOpacity>
-                ) : (
-                    <TouchableOpacity onPress={onTouchMenu}>
-                        <ArrowLeft color={COLORS_APP.WHITE} />
-                    </TouchableOpacity>
-                )
-            }
-            <Text style={styles.menu__tittle}>{activeScreen ?? 'ITSA APP'}</Text>
+        <View style={openSideBar ? styles.menu__bodyOpen : styles.menu__body}>
+            <View style={styles.menu__container}>
+                <TouchableOpacity >
+                    <MenuIcon color={COLORS_APP.WHITE} onPress={() => setOpenSideBar(!openSideBar)} />
+                </TouchableOpacity>
+                <Text style={styles.menu__tittle}>{tittle}</Text>
+            </View>
+            {openSideBar && <SideBar closeMenu={() => setOpenSideBar(false)}/>}
         </View>
     )
 }

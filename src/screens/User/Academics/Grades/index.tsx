@@ -2,7 +2,7 @@
 import Accordion from '@components/ui/Accordion/Accordion'
 import ListItem from '@components/ui/List/ListItem/Listitem'
 import React, { useState } from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { grades } from '__mocks__/grades'
 import styles from './Grades.styles'
 
@@ -17,7 +17,6 @@ const Grades = () => {
 
     return (
         <View style={styles.grade__container}>
-            <Text>Grades</Text>
             {grades.map(({ courts, module }) => (
                 <Accordion
                     expanded={expanded === module}

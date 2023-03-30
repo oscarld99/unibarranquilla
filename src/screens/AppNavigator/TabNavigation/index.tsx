@@ -5,6 +5,7 @@ import { News, Programs, Tab2, User } from '@screens/index';
 import { ParamListBase, RouteProp } from '@react-navigation/native';
 import { Book, Location, News as NewsIcon, User as UserIcon } from '@components/icons';
 import Radio from '@components/icons/radio';
+import Menu from '@components/Menu';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,12 +13,11 @@ const tabScreensOptions = ({ route }: {
     route: RouteProp<ParamListBase, string>;
     navigation: any;
 }): BottomTabNavigationOptions => ({
-    headerShown: false,
     tabBarIcon: () => {
         switch (route.name) {
             case 'Noticias':
                 return <NewsIcon />
-            case 'News':
+            case 'Programas':
                 return <Book />
             case 'Estudiante':
                 return <UserIcon />
@@ -28,12 +28,13 @@ const tabScreensOptions = ({ route }: {
             default:
                 return <Book />
         }
-    }
+    },
+    header: () => <Menu tittle={route.name} />
 })
 
 const TabNavigation = () => {
     return (
-        <Tab.Navigator screenOptions={tabScreensOptions}>
+        <Tab.Navigator screenOptions={tabScreensOptions} >
             <Tab.Screen name="Programas" component={Programs} />
             <Tab.Screen name="Map" component={Tab2} />
             <Tab.Screen name="Noticias" component={News} />

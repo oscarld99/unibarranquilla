@@ -14,6 +14,14 @@ const defaultState: DefaultValueAuth = {
   signOut: () => { }
 }
 
+const defaultData = {
+  email: 'oscarld@gmail.com',
+  lastName: 'lora',
+  name: 'oscar',
+  token: 'sdsda-wqdwqd-wdas',
+  userName: 'oscarld99',
+}
+
 const authReducer = (state: DefaultValueAuth, action: Action<any>): DefaultValueAuth => {
   switch (action.type) {
     case ACTION_SIGN_OUT:
@@ -21,8 +29,7 @@ const authReducer = (state: DefaultValueAuth, action: Action<any>): DefaultValue
     case ACTION_SIGN_IN:
       return {
         ...state,
-        token: action.payload.token,
-        email: action.payload.email,
+        ...action.payload
       };
     default:
       return state;
@@ -33,21 +40,20 @@ const validCredentials = (credentials: SigninProps): boolean => {
   if (credentials.userName === '1234' && credentials.password === '1234')
     return true
   return false
-
 }
 
-const signIn = (dispatch: React.Dispatch<Action<SigninProps>>) => {
+const signIn = (dispatch: React.Dispatch<Action<any>>) => {
   return (credentials: SigninProps) => {
     // Hacer el login y resolver los datos al dispatch
     const isValid = validCredentials(credentials)
     if (isValid) {
       dispatch({
         type: ACTION_SIGN_IN,
-        payload: credentials
+        payload: defaultData
       });
       return AUTH_RESPONSES.success
     }
-    throw AUTH_RESPONSES.error_invalid
+    return AUTH_RESPONSES.error_invalid
   };
 };
 

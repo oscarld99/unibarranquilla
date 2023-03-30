@@ -4,6 +4,16 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     menu__body: {
+        height: 50,
+        width: '100%'
+    },
+    menu__bodyOpen: {
+        bottom:0,
+        height: '100%',
+        top: 0,
+        width: '100%'
+    },
+    menu__container: {
         alignItems: 'center',
         backgroundColor: COLORS_APP.PRIMARY,
         flexDirection: 'row',

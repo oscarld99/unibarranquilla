@@ -27,6 +27,7 @@ export default StyleSheet.create({
         borderBottomRightRadius: 8
     },
     listItem__detail: {
+        alignItems: 'center',
         flexDirection: 'row',
         gap: 10,
         maxWidth: '90%'

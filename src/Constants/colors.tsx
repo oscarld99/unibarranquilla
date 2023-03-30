@@ -6,5 +6,5 @@ export const COLORS_APP = {
     PRIMARY: '#1a2239',
     SECONDARY: '#fcdf2d',
     TERTIARY: '#fefefe',
-    WHITE: '#fff'
+    WHITE: '#ffffff'
 }

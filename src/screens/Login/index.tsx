@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useState, useContext, useRef, LegacyRef } from 'react';
 import {
+    Alert,
     Image,
     Text,
     TextInput,
@@ -38,13 +39,14 @@ const Signin = ({ navigation }: { navigation: any }): React.ReactElement => {
 
     const login = () => {
         const response = signIn({ userName, password }) as unknown as string;
+        console.log({response})
         switch (response) {
             case AUTH_RESPONSES.success:
-                navigation.navigate('Home')
+                navigation.navigate('Noticias')
                 break;
             case AUTH_RESPONSES.error_invalid:
             default:
-                console.log('Credenciales incorrectas')
+                Alert.alert('Credenciales incorrectas')
                 break;
         }
 

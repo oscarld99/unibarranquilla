@@ -3,39 +3,39 @@ export const userModules = {
   academicos: [
     {
       text: "Notas Actuales",
-      path: 'Grades'
+      path: 'Notas Actuales'
     },
     {
       text: "Notas Historicas",
-      path: 'OldGrades'
+      path: 'Notas Historicas'
     },
     {
       text: "Horario",
-      path: 'Shedule'
+      path: 'Horario'
     },
     {
-      text: "Carnet virtual",
-      path: 'VirtualCard'
+      text: "Carnet Virtual",
+      path: 'Carnet Virtual'
     },
   ],
   bienestar: [
     {
       text: "Mis monitorias",
-      path: 'Grades'
+      path: 'Mis monitorias'
     },
     {
       text: "Monitorias disponibles",
-      path: 'Grades'
+      path: 'Monitorias disponibles'
     },
     {
       text: "Deportes",
-      path: 'Grades'
+      path: 'Deportes'
     }
   ],
   pqr: [
     {
       text: "Peticiones, Quejas y reclamos",
-      path: 'Grades'
+      path: 'Peticiones, Quejas y reclamos'
     },
     {
       text: "Consulta pqrs",

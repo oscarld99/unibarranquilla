@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import Menu from '@components/Menu'
 import { MenuContextProvider } from '@contexts/MenuContext'
 import TabNavigation from '@screens/AppNavigator/TabNavigation'
 import React from 'react'
@@ -11,7 +10,6 @@ const Home = () => {
     return (
         <View style={styles.home__body}>
             <MenuContextProvider>
-                <Menu />
                 <TabNavigation />
             </MenuContextProvider>
         </View>

@@ -32,7 +32,7 @@ const createAuthContext = <T extends unknown>({
     }
 
     return (
-      <Context.Provider value={{ state, ...boundActions }}>
+      <Context.Provider value={{ ...Object(state), ...boundActions }}>
         {children}
       </Context.Provider>
     )

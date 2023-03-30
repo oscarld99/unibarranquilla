@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 const VirtualCard = () => {
     return (
-        <View>VirtualCard</View>
+        <View><Text>VirtualCard</Text></View>
     )
 }
 

@@ -12,7 +12,7 @@ import {
 import styles from './Accordion.styles'
 
 interface AccordionProps {
-    component: React.ReactElement;
+    component?: React.ReactElement;
     children: React.ReactElement;
     expanded: boolean;
     tittle?: string;

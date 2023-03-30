@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { Home, Login } from '@screens/index';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, ParamListBase, RouteProp } from '@react-navigation/native';
 import {
     Grades,
     OldGradeDetails,
@@ -10,52 +10,54 @@ import {
     Schedule,
     VirtualCard
 } from '@screens/User/Academics';
+import { Header } from '@components/ui';
+import { AuthContext } from '@contexts/AuthContext';
 
 const Stack = createNativeStackNavigator();
+
+const stackOptions = ({ route }: {
+    route: RouteProp<ParamListBase, string>;
+    navigation: any;
+}): NativeStackNavigationOptions => ({
+    headerShown: route.name !== 'Noticias',
+    header: () => <Header tittle={route.name} />
+})
 
 
 const AuthStack = () => {
 
-    const isLogged = true
+    const authContext = React.useContext(AuthContext)
+
+    const isLogged = authContext?.token
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={isLogged ? 'Home' : 'Login'}>
-                {isLogged &&
-                    <Stack.Group>
-                        <Stack.Screen
-                            component={Home}
-                            name="Home"
-                            options={{ headerShown: false }} />
-                        <Stack.Screen
-                            component={Grades}
-                            name="Grades"
-                            options={{ headerShown: false }} />
-                        <Stack.Screen
-                            component={OldGrades}
-                            name="OldGrades"
-                            options={{ headerShown: false }} />
-                        <Stack.Screen
-                            component={OldGradeDetails}
-                            name="OldGradeDetails"
-                            options={{ headerShown: false }} />
-                        <Stack.Screen
-                            component={Schedule}
-                            name="Shedule"
-                            options={{ headerShown: false }} />
-                        <Stack.Screen
-                            component={VirtualCard}
-                            name="VirtualCard"
-                            options={{ headerShown: false }} />
-                    </Stack.Group>
-                }
-                {!isLogged &&
+            <Stack.Navigator initialRouteName={isLogged ? 'Noticias' : 'Login'}>
+                <Stack.Group screenOptions={stackOptions}>
                     <Stack.Screen
-                        component={Login}
-                        name="Login"
-                        options={{ headerShown: false }}
-                    />
-                }
+                        component={Home}
+                        name="Noticias" />
+                    <Stack.Screen
+                        component={Grades}
+                        name="Notas Actuales" />
+                    <Stack.Screen
+                        component={OldGrades}
+                        name="Notas Historicas" />
+                    <Stack.Screen
+                        component={OldGradeDetails}
+                        name="Detalle de notas" />
+                    <Stack.Screen
+                        component={Schedule}
+                        name="Horario" />
+                    <Stack.Screen
+                        component={VirtualCard}
+                        name="Carnet Virtual" />
+                </Stack.Group>
+                <Stack.Screen
+                    component={Login}
+                    name="Login"
+                    options={{ headerShown: false }}
+                />
 
             </Stack.Navigator>
         </NavigationContainer>

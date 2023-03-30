@@ -2,51 +2,63 @@
 import { IGrade } from "@interfaces/data/grades.interface";
 
 export const grades: IGrade[] = [{
-  module: 'Module 1',
+  module: 'Electiva de profundizacion profesional 2',
   courts: [{
     courtNumber: 1,
-    grade: 1,
+    grade: 3.8,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 2,
+    grade: 4,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 3,
+    grade: 3.6,
   }]
 }, {
-  module: 'Module 2',
+  module: 'Diseño de redes de voz sobre ip',
   courts: [{
     courtNumber: 1,
-    grade: 1,
+    grade: 4,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 2,
+    grade: 3.5,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 3,
+    grade: 4.2,
   }]
 }, {
-  module: 'Module 3',
+  module: 'Sistema de almacenamiento',
   courts: [{
     courtNumber: 1,
-    grade: 1,
+    grade: 3.5,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 2,
+    grade: 4.6,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 3,
+    grade: 4.1,
   }]
 }, {
-  module: 'Module 4',
+  module: 'Diseño de sistemas telemáticos',
   courts: [{
     courtNumber: 1,
-    grade: 1,
+    grade: 3.3,
   }, {
-    courtNumber: 1,
-    grade: 1,
+    courtNumber: 2,
+    grade: 4,
   }, {
+    courtNumber: 3,
+    grade: 4.2,
+  }]
+}, {
+  module: 'Conmutación ip avanzada',
+  courts: [{
     courtNumber: 1,
-    grade: 1,
+    grade: 3.3,
+  }, {
+    courtNumber: 2,
+    grade: 4,
+  }, {
+    courtNumber: 3,
+    grade: 4.2,
   }]
 }]
