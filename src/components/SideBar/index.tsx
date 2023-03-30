@@ -10,12 +10,19 @@ import React, { useContext } from 'react'
 import { Image, Linking, Text, TouchableOpacity, View } from 'react-native'
 import styles from './Sidebar.styles'
 
-const imgUser = require('@assets/images/oscar.jpg')
+/*const importImage = (name: string) => {
+    try {
+        return require(`@assets/images/users/${name.toLowerCase()}.jpg`)
+    } catch (error) {
+        return require('@assets/images/oscar.jpg')
+    }
+}*/
 
 const SideBar = ({ closeMenu }: { closeMenu: () => void }) => {
 
     const authContext = useContext(AuthContext)
     const navigation = useNavigation()
+    const imgUser = require('@assets/images/test.jpg')
 
     const onCloseSession = () => {
         authContext.signOut()
@@ -28,14 +35,14 @@ const SideBar = ({ closeMenu }: { closeMenu: () => void }) => {
                 <View style={styles.sideBar__user}>
                     <View>
                         <Image
-                            alt='Oscar Lora De Sales'
+                            alt={`${authContext.name} ${authContext.lastName}`}
                             source={imgUser}
                             style={styles.sideBar__userImage}
                         />
                     </View>
                     <View style={styles.sideBar__userDetail}>
                         <Text style={styles.sideBar__userName} numberOfLines={1}>{`${authContext.name} ${authContext.lastName}`}</Text>
-                        <Text style={styles.sideBar__userDescription}>{`CC. ${authContext.userName}`}</Text>
+                        <Text style={styles.sideBar__userDescription}>{`CC. ${authContext.id}`}</Text>
                         <Text style={styles.sideBar__userDescription}>Ingenieria Telematica</Text>
                     </View>
                 </View>

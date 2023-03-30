@@ -1,14 +1,12 @@
+import { IUsers } from "./data/user.interface";
+
 /* eslint-disable prettier/prettier */
 export interface Action<T> {
   type: string;
   payload?: T;
 }
 
-export interface DefaultValueAuth {
-  userName: string
-  name: string
-  lastName: string
-  email: string
+export interface DefaultValueAuth extends IUsers {
   token: string | null
   signIn: (credentials: SigninProps) => void,
   signOut: () => void

@@ -3,24 +3,21 @@ import React from 'react';
 import { ACTION_SIGN_IN, ACTION_SIGN_OUT, AUTH_RESPONSES } from '@Constants/Contexts/AuthContext';
 import { Action, DefaultValueAuth, SigninProps } from '@interfaces/Contexts.interface';
 import CreateOwnContext from '../CreateOwnContext';
+import { users } from '__mocks__';
+import { IUsers } from '@interfaces/data/user.interface';
 
 const defaultState: DefaultValueAuth = {
+  id: '',
+  password: '',
+  userName: '',
   email: '',
   lastName: '',
   name: '',
   token: null,
-  userName: '',
   signIn: () => { },
   signOut: () => { }
 }
 
-const defaultData = {
-  email: 'oscarld@gmail.com',
-  lastName: 'lora',
-  name: 'oscar',
-  token: 'sdsda-wqdwqd-wdas',
-  userName: 'oscarld99',
-}
 
 const authReducer = (state: DefaultValueAuth, action: Action<any>): DefaultValueAuth => {
   switch (action.type) {
@@ -36,9 +33,10 @@ const authReducer = (state: DefaultValueAuth, action: Action<any>): DefaultValue
   }
 };
 
-const validCredentials = (credentials: SigninProps): boolean => {
-  if (credentials.userName === '1234' && credentials.password === '1234')
-    return true
+const validCredentials = (credentials: SigninProps): boolean | IUsers => {
+  const user = users.find(({ id, userName }) => id === credentials.userName || userName === credentials.userName)
+  if (user && user.password === credentials.password)
+    return user
   return false
 }
 
@@ -49,7 +47,7 @@ const signIn = (dispatch: React.Dispatch<Action<any>>) => {
     if (isValid) {
       dispatch({
         type: ACTION_SIGN_IN,
-        payload: defaultData
+        payload: isValid
       });
       return AUTH_RESPONSES.success
     }
