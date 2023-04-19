@@ -17,6 +17,7 @@ export default StyleSheet.create({
         width: '100%'
     },
     cardNews__image: {
+        borderRadius: 8,
         height: 150,
         width: '100%'
     },
@@ -30,6 +31,7 @@ export default StyleSheet.create({
     },
     cardNews__tittle: {
         color: COLORS_APP.BLACK,
+        fontSize: 16,
         fontWeight: '600'
     },
     cardNews__description: {

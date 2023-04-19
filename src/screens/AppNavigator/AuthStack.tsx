@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
-import { Home, Login } from '@screens/index';
+import { Home, Login, NewsDetail } from '@screens/index';
 import { NavigationContainer, ParamListBase, RouteProp } from '@react-navigation/native';
 import {
     Grades,
@@ -12,6 +12,7 @@ import {
 } from '@screens/User/Academics';
 import { Header } from '@components/ui';
 import { AuthContext } from '@contexts/AuthContext';
+import FormPQR from '@screens/User/PQR/FormPQR';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,9 @@ const AuthStack = () => {
                         component={Home}
                         name="Noticias" />
                     <Stack.Screen
+                        component={NewsDetail}
+                        name="Detalle de noticias" />
+                    <Stack.Screen
                         component={Grades}
                         name="Notas Actuales" />
                     <Stack.Screen
@@ -52,6 +56,9 @@ const AuthStack = () => {
                     <Stack.Screen
                         component={VirtualCard}
                         name="Carnet Virtual" />
+                    <Stack.Screen
+                        component={FormPQR}
+                        name="Peticiones, Quejas y reclamos" />
                 </Stack.Group>
                 <Stack.Screen
                     component={Login}

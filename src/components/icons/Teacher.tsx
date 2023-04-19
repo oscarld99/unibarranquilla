@@ -5,29 +5,28 @@ import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
 
-const Book = ({
+const Teacher = ({
   color = COLORS_APP.PRIMARY,
   customSize = '24',
   ...props
 }: IconProps) => {
   return (
-
     <Svg
-      height={`${customSize}pt`}
-      preserveAspectRatio="xMidYMid meet"
-      viewBox="0 0 512.000000 512.000000"
-      width={`${customSize}pt`}
+      width={customSize}
+      height={customSize}
+      fill="none"
+      viewBox="0 0 24 24"
       {...props}
     >
       <Path
-        d="M175.703 0l37.63 18.795L250.963 0h175.704v320H261.013l-47.68 23.851L165.632 320H0V0h175.703zm-10.071 42.667H42.667v234.666h133.036l16.297 8.14V55.851l-26.368-13.184zm218.368 0H261.013l-26.347 13.179v229.627l16.298-8.14H384V42.667zm-21.333 128v32H256v-32h106.667zm-192 0v32H64v-32h106.667zm192-85.334v32H256v-32h106.667zm-192 0v32H64v-32h106.667z"
-        transform="translate(42.667 106.667)"
         fill={color}
-        stroke="none"
-        strokeWidth={1}
-        fillRule="evenodd"
+        d="M16.831 15.64a1 1 0 0 1 1.55.84v1.29c0 1.27-.99 2.63-2.18 3.03l-3.19 1.06c-.56.19-1.47.19-2.02 0l-3.19-1.06c-1.2-.4-2.18-1.76-2.18-3.03v-1.3c0-.79.88-1.27 1.54-.84l2.06 1.34c.79.53 1.79.79 2.79.79s2-.26 2.79-.79l2.03-1.33Z"
+      />
+      <Path
+        fill={color}
+        d="m19.98 6.459-5.99-3.93c-1.08-.71-2.86-.71-3.94 0l-6.02 3.93c-1.93 1.25-1.93 4.08 0 5.34l1.6 1.04 4.42 2.88c1.08.71 2.86.71 3.94 0l4.39-2.88 1.37-.9v3.06c0 .41.34.75.75.75s.75-.34.75-.75v-4.92c.4-1.29-.01-2.79-1.27-3.62Z"
       />
     </Svg>
   );
 };
-export default Book;
+export default Teacher;

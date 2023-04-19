@@ -35,6 +35,9 @@ export default StyleSheet.create({
     listItem__arrow: {
         justifyContent: 'center'
     },
+    listItem__text: {
+        color:COLORS_APP.BLACK
+    },
     listItem__divider: {
         borderWidth: 0.5,
         borderColor: COLORS_APP.GRAY,

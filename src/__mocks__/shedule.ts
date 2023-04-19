@@ -11,12 +11,12 @@ export const shedule: sheduleDay[] = [{
         sede: 'Barranquilla',
         id: '12_G1_TLM_BQ'
     }, {
-        moduleName: 'Teoria de trafico y colas',
+        moduleName: 'Proyecto de grado',
         startTime: '19:00',
         endTime: '21:59',
-        teacher: 'Marlene Ballesta',
-        salon: 'Lab investigacion',
-        sede: 'Barranquilla',
+        teacher: 'Andres Ahumada',
+        salon: 'Salon Magistral A1',
+        sede: 'Soledad',
         id: '13_G1_TLM_BQ'
     }]
 }, {
@@ -30,12 +30,12 @@ export const shedule: sheduleDay[] = [{
         sede: 'Barranquilla',
         id: '14_G1_TLM_BQ'
     }, {
-        moduleName: 'Teoria de trafico y colas',
+        moduleName: 'Proyecto de grado',
         startTime: '19:00',
         endTime: '21:59',
-        teacher: 'Marlene Ballesta',
-        salon: 'Lab investigacion',
-        sede: 'Barranquilla',
+        teacher: 'Andres Ahumada',
+        salon: 'Salon Magistral A1',
+        sede: 'Soledad',
         id: '15_G1_TLM_BQ'
     }]
 }, {
@@ -63,12 +63,12 @@ export const shedule: sheduleDay[] = [{
         sede: 'Barranquilla',
         id: '17_G1_TLM_BQ'
     }, {
-        moduleName: 'Teoria de trafico y colas',
+        moduleName: 'Proyecto de grado',
         startTime: '19:00',
         endTime: '21:59',
-        teacher: 'Marlene Ballesta',
-        salon: 'Lab investigacion',
-        sede: 'Barranquilla',
+        teacher: 'Andres Ahumada',
+        salon: 'Salon Magistral A1',
+        sede: 'Soledad',
         id: '18_G1_TLM_BQ'
     }]
 }, {
@@ -79,7 +79,7 @@ export const shedule: sheduleDay[] = [{
         endTime: '21:59',
         teacher: 'Marlene Ballesta',
         salon: 'Lab investigacion',
-        sede: 'Barranquilla',
+        sede: 'Soledad',
         id: '19_G1_TLM_BQ'
     }]
 }, {

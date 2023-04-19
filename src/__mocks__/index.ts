@@ -1,4 +1,5 @@
 export * from './grades'
+export * from './geometricPlace'
 export * from './OldGrades'
 export * from './shedule'
 export * from './userModules'

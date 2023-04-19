@@ -1,10 +1,21 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
 import { BottomTabNavigationOptions, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { News, Programs, Tab2, User } from '@screens/index';
+import {
+    Location,
+    News,
+    Programs,
+    Radio,
+    User
+} from '@screens/index';
 import { ParamListBase, RouteProp } from '@react-navigation/native';
-import { Book, Location, News as NewsIcon, User as UserIcon } from '@components/icons';
-import Radio from '@components/icons/radio';
+import {
+    Book,
+    Location as LocationIcon,
+    News as NewsIcon,
+    User as UserIcon
+} from '@components/icons';
+import RadioIcon from '@components/icons/radio';
 import Menu from '@components/Menu';
 
 const Tab = createBottomTabNavigator();
@@ -22,9 +33,9 @@ const tabScreensOptions = ({ route }: {
             case 'Estudiante':
                 return <UserIcon />
             case 'Map':
-                return <Location />
+                return <LocationIcon />
             case 'Emisora':
-                return <Radio />
+                return <RadioIcon />
             default:
                 return <Book />
         }
@@ -34,11 +45,11 @@ const tabScreensOptions = ({ route }: {
 
 const TabNavigation = () => {
     return (
-        <Tab.Navigator screenOptions={tabScreensOptions} >
+        <Tab.Navigator screenOptions={tabScreensOptions} initialRouteName='Noticias'>
             <Tab.Screen name="Programas" component={Programs} />
-            <Tab.Screen name="Map" component={Tab2} />
+            <Tab.Screen name="Map" component={Location} />
             <Tab.Screen name="Noticias" component={News} />
-            <Tab.Screen name="Emisora" component={Tab2} />
+            <Tab.Screen name="Emisora" component={Radio} />
             <Tab.Screen name="Estudiante" component={User} />
         </Tab.Navigator>
     );
