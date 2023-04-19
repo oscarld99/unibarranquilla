@@ -21,16 +21,6 @@ export default StyleSheet.create({
         backgroundColor: COLORS_APP.GRAY,
         color: COLORS_APP.BLACK,
         paddingLeft: 15
-    },
-    // module
-    shedule__moduleName: {
-        fontWeight: '700',
-        fontSize: 18
-    },
-    shedule__moduleBold: {
-        fontWeight: '600',
-    },
-    shedule__moduleText: {
-        fontSize: 14
     }
+
 });

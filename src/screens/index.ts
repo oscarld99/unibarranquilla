@@ -1,8 +1,10 @@
 /* eslint-disable prettier/prettier */
 export { default as AppNavigator } from './AppNavigator'
-export { default as Login } from './Login'
 export { default as Home } from './Home'
+export { default as Login } from './Login'
+export { default as Location } from './Location'
 export { default as News } from './News'
+export { default as NewsDetail } from './News/NewsDetail'
 export { default as Programs } from './Programs'
-export { default as Tab2 } from './Radio'
+export { default as Radio } from './Radio'
 export { default as User } from './User'

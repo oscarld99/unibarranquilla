@@ -2,8 +2,9 @@
 import ListItem from '@components/ui/List/ListItem/Listitem'
 import { Programs } from '@interfaces/data/oldGrades.interface'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import styles from './OldGradeDetails.styles'
+import { calcModuleAverage } from 'utils/helpers/calcAverage'
 
 const OldGradeDetails = ({ route }) => {
 
@@ -11,11 +12,13 @@ const OldGradeDetails = ({ route }) => {
 
     return (
         <View style={styles.oldGrades__container}>
-            <Text>{program?.program}</Text>
-            <View>
+            <Text style={styles.oldGrades__program}>{program?.program}</Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
                 {program?.periods.map(({ id, modules, period, year }) => (
                     <View key={`period_${year}-${period}__${id}`}>
-                        <Text>{`Periodo ${year}-${period}`}</Text>
+                        <View style={styles.oldGrades__tittle}>
+                            <Text style={styles.oldGrades__period}>{`Periodo ${year}-${period}`}</Text>
+                        </View>
                         {
                             modules.map((module) => (
                                 <ListItem
@@ -25,10 +28,15 @@ const OldGradeDetails = ({ route }) => {
                                     text={module.module} />
                             ))
                         }
-
+                        <ListItem
+                            additionalText={calcModuleAverage(modules)}
+                            key={`module__${program.program}__court__average`}
+                            isLast={true}
+                            noIcon={true}
+                            text={'Promedio'} />
                     </View>
                 ))}
-            </View>
+            </ScrollView>
         </View>
     )
 }

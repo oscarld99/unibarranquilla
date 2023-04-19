@@ -1,10 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
 
 const SearchPQR = () => {
     return (
-        <View>SearchPQR</View>
+        <View>
+            <Text>SearchPQR</Text>
+        </View>
     )
 }
 

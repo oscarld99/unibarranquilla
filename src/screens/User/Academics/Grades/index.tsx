@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { View } from 'react-native'
 import { grades } from '__mocks__/grades'
 import styles from './Grades.styles'
+import { calcAverage } from 'utils/helpers/calcAverage'
 
 const Grades = () => {
 
@@ -25,14 +26,19 @@ const Grades = () => {
                     tittle={module}
                 >
                     <View>
-                        {courts.map(({ courtNumber, grade }, key) => (
+                        {courts.map(({ courtNumber, grade }) => (
                             <ListItem
                                 additionalText={grade}
                                 key={`module__${module}__court__${courtNumber}`}
-                                isLast={key === (courts.length - 1)}
                                 noIcon={true}
                                 text={`Corte ${courtNumber}`} />
                         ))}
+                        <ListItem
+                            additionalText={calcAverage(courts)}
+                            key={`module__${module}__court__average`}
+                            isLast={true}
+                            noIcon={true}
+                            text={'Promedio'} />
                     </View>
                 </Accordion>
             ))

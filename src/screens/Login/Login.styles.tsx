@@ -29,6 +29,7 @@ export default StyleSheet.create({
   },
   login__textInput: {
     backgroundColor: COLORS_APP.LIGHT_GRAY,
+    color:COLORS_APP.BLACK,
     borderRadius: 30,
     flex: 1,
     height: 50,

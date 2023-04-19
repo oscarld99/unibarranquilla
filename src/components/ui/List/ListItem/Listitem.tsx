@@ -33,11 +33,11 @@ const ListItem = ({
       <TouchableOpacity onPress={onPress} style={itemStyles}>
         <View style={styles.listItem__detail}>
           {!noIcon && icon}
-          <Text>{text}</Text>
+          <Text style={styles.listItem__text}>{text}</Text>
         </View>
         <View style={styles.listItem__arrow}>
           {!noIcon && <ArrowRight color={COLORS_APP.BLACK} />}
-          {additionalText && <Text>{additionalText}</Text>}
+          {additionalText && <Text style={styles.listItem__text}>{additionalText}</Text>}
         </View>
       </TouchableOpacity>
       {!isLast && <View style={styles.listItem__divider} />}

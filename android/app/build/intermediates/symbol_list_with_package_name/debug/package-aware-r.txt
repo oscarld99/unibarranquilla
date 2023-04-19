@@ -1404,9 +1404,12 @@ drawable src_assets_images_aula
 drawable src_assets_images_correo
 drawable src_assets_images_itsa_radio
 drawable src_assets_images_logo__unibarranquilla__itsa
+drawable src_assets_images_news
 drawable src_assets_images_oscar
+drawable src_assets_images_qr
 drawable src_assets_images_tecnico
 drawable src_assets_images_tecnologo
+drawable src_assets_images_test
 drawable src_assets_images_universitario
 drawable test_custom_background
 drawable test_level_drawable
