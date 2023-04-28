@@ -1,26 +1,23 @@
 /* eslint-disable prettier/prettier */
 import { COLORS_APP } from '@Constants/colors';
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     autoComplete__container: {
         flexDirection: 'row',
-        position: 'absolute',
         width: '100%',
+        padding: 10,
         zIndex: 5
-    }, autoComplete__backDrop: {
-        backgroundColor: '#00000020',
-        height: '100%',
-        marginLeft: -20,
-        marginTop: -20,
-        position: 'absolute',
-        top: 0,
-        width: Dimensions.get('window').width,
-        zIndex: 4
     }, autoComplete__input: {
-        height: 40,
-        width: '80%',
+        borderRadius: 8,
+        color: COLORS_APP.BLACK,
+        width: '100%',
+        position: 'relative',
         zIndex: 6
+    }, autoComplete__inputContainer: {
+        borderColor: COLORS_APP.PRIMARY,
+        borderWidth: .5,
+        borderRadius: 8
     }, autoComplete__item: {
         backgroundColor: COLORS_APP.LIGHT_GRAY,
         borderColor: COLORS_APP.GRAY,

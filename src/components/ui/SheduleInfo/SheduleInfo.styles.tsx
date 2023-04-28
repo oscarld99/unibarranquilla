@@ -50,7 +50,11 @@ export default StyleSheet.create({
     },
     sheduleInfo__moduleBold: {
         color: COLORS_APP.BLACK,
+        fontSize: 16,
         fontWeight: '600'
+    },
+    sheduleInfo__moduleValue: {
+        color: COLORS_APP.BLACK
     },
     sheduleInfo__moduleText: {
         color: COLORS_APP.BLACK,

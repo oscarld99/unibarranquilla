@@ -39,7 +39,7 @@ export const userModules = {
     },
     {
       text: "Consulta pqrs",
-      path: 'Grades'
+      path: 'Consulta de PQRS'
     },
   ],
 };

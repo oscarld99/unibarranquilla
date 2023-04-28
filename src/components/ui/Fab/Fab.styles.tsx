@@ -12,7 +12,6 @@ export default StyleSheet.create({
         justifyContent: 'center',
         width: 50,
         position: 'absolute',
-        right: 10,
         height: 50,
         backgroundColor: COLORS_APP.PRIMARY,
         zIndex:10

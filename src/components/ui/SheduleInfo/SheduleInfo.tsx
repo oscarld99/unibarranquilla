@@ -61,7 +61,7 @@ const SheduleInfo = ({
                         </Text>
                         <View style={styles.sheduleInfo__info}>
                             <University />
-                            <Text>
+                            <Text style={styles.sheduleInfo__moduleValue}>
                                 <Text style={styles.sheduleInfo__moduleBold}>
                                     Sede:
                                 </Text>
@@ -70,7 +70,7 @@ const SheduleInfo = ({
                         </View>
                         <View style={styles.sheduleInfo__info}>
                             <Location customSize='20' />
-                            <Text>
+                            <Text style={styles.sheduleInfo__moduleValue}>
                                 <Text style={styles.sheduleInfo__moduleBold}>
                                     Salon:
                                 </Text>
@@ -79,7 +79,7 @@ const SheduleInfo = ({
                         </View>
                         <View style={styles.sheduleInfo__info}>
                             <Teacher customSize='20' />
-                            <Text>
+                            <Text style={styles.sheduleInfo__moduleValue}>
                                 <Text style={styles.sheduleInfo__moduleBold}>
                                     Profesor:
                                 </Text>
@@ -88,7 +88,7 @@ const SheduleInfo = ({
                         </View>
                         <View style={styles.sheduleInfo__info}>
                             <Clock customSize='20' />
-                            <Text>
+                            <Text style={styles.sheduleInfo__moduleValue}>
                                 <Text style={styles.sheduleInfo__moduleBold}>
                                     Hora:
                                 </Text>

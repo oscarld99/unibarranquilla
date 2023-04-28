@@ -39,7 +39,6 @@ const Signin = ({ navigation }: { navigation: any }): React.ReactElement => {
 
     const login = () => {
         const response = signIn({ userName, password }) as unknown as string;
-        console.log({response})
         switch (response) {
             case AUTH_RESPONSES.success:
                 navigation.navigate('Noticias')

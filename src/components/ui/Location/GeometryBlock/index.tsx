@@ -2,11 +2,13 @@
 import React, { ReactNode } from 'react'
 import { Text, TouchableOpacity } from "react-native"
 import styles from './GeometryBlock.styles'
+import { University, WC } from '@components/icons';
 
 interface GeometryBlockProps {
     borderWidth?: number;
     children: ReactNode;
     type: 'PLACE' | 'COMMON_AREA' | 'STAIRS' | 'GREEN_AREA' | 'WC';
+    subType: 'CLASSROOM' | 'COFFE SHOP' | 'LIBRARY' | 'ADMIN' | 'HALL' | 'ENTRANCE';
     elevation?: number;
     height: number;
     id?: string;
@@ -54,6 +56,8 @@ const GeometryBlock = ({
             borderColor: '#E5BE01'
         }
     }
+    const showText = scale > 0.6
+    const showIcon = (!showText && !['STAIRS', 'COMMON_AREA'].includes(type))
 
     return (
         <TouchableOpacity
@@ -68,7 +72,10 @@ const GeometryBlock = ({
                 width: width * scale,
                 zIndex: elevation
             }}>
-            {scale > 0.6 && <Text style={styles.geometryBlock__text}>{tittle}</Text>}
+            {showText && <Text style={styles.geometryBlock__text} numberOfLines={2}>{tittle}</Text>}
+            {showIcon && (
+                type === 'WC' ? <WC customSize='16' /> : <University customSize='16' />
+            )}
             {children}
         </TouchableOpacity>
     )
