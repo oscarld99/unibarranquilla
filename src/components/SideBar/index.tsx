@@ -2,6 +2,7 @@
 import {
     Camera,
     LogOut,
+    Telephone,
     Web
 } from '@components/icons'
 import { AuthContext } from '@contexts/AuthContext'
@@ -51,6 +52,13 @@ const SideBar = ({ closeMenu }: { closeMenu: () => void }) => {
                         <TouchableOpacity onPress={() => Linking.openURL('https://www.unibarranquilla.edu.co/')} style={styles.sideBar__itemMenu}>
                             <Web customSize={'20'} />
                             <Text style={styles.sideBar__itemText}>SITIO WEB</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.sideBar__itemDivider} />
+                    <View style={styles.sideBar__item}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Contactos')} style={styles.sideBar__itemMenu}>
+                            <Telephone customSize={'20'} />
+                            <Text style={styles.sideBar__itemText}>CONTACTOS</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.sideBar__itemDivider} />

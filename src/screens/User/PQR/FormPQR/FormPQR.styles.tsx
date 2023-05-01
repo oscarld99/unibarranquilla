@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { COLORS_APP } from '@Constants/colors';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
@@ -11,5 +12,7 @@ export default StyleSheet.create({
     form__inputText: {
         borderWidth: 1,
         borderRadius: 8
+    },form__textext:{
+        color:COLORS_APP.BLACK
     }
 });

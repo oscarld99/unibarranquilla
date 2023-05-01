@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react';
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
-import { Home, Login, NewsDetail } from '@screens/index';
+import { Contacts, Home, Login, NewsDetail } from '@screens/index';
 import { NavigationContainer, ParamListBase, RouteProp } from '@react-navigation/native';
 import {
     Grades,
@@ -13,6 +13,8 @@ import {
 import { Header } from '@components/ui';
 import { AuthContext } from '@contexts/AuthContext';
 import FormPQR from '@screens/User/PQR/FormPQR';
+import { Monitoring, MonitoringAvailible, Sports } from '@screens/User/Wellness';
+import SearchPQR from '@screens/User/PQR/SearchPQR';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +38,9 @@ const AuthStack = () => {
             <Stack.Navigator initialRouteName={isLogged ? 'Noticias' : 'Login'}>
                 <Stack.Group screenOptions={stackOptions}>
                     <Stack.Screen
+                        component={Contacts}
+                        name="Contactos" />
+                    <Stack.Screen
                         component={Home}
                         name="Noticias" />
                     <Stack.Screen
@@ -57,8 +62,20 @@ const AuthStack = () => {
                         component={VirtualCard}
                         name="Carnet Virtual" />
                     <Stack.Screen
+                        component={Monitoring}
+                        name="Mis monitorias" />
+                    <Stack.Screen
+                        component={MonitoringAvailible}
+                        name="Monitorias disponibles" />
+                    <Stack.Screen
+                        component={Sports}
+                        name="Deportes" />
+                    <Stack.Screen
                         component={FormPQR}
                         name="Peticiones, Quejas y reclamos" />
+                    <Stack.Screen
+                        component={SearchPQR}
+                        name="Consulta de PQRS" />
                 </Stack.Group>
                 <Stack.Screen
                     component={Login}

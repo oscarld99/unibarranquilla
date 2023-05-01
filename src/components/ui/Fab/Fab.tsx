@@ -3,22 +3,27 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import styles from './Fab.styles'
 
-const Header = ({
-    bottom = 10,
-    icon,
-    onPress
-}: {
+interface FabProps {
     bottom?: number;
     icon: JSX.Element;
+    right?: number;
     onPress: () => void;
-}) => {
+}
+
+const Fab = ({
+    bottom = 10,
+    icon,
+    right = 10,
+    onPress
+}: FabProps) => {
 
     return (
         <TouchableOpacity
             onPress={onPress}
             style={{
                 ...styles.fab__button,
-                bottom
+                bottom,
+                right
             }}
         >
             {icon}
@@ -26,4 +31,4 @@ const Header = ({
     )
 }
 
-export default Header
+export default Fab

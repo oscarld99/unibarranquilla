@@ -27,7 +27,6 @@ const Schedule = () => {
                     onExpand={handleExpanded}
                 />
             ))}
-
         </View>
     )
 }

@@ -26,10 +26,6 @@ export const userModules = {
     {
       text: "Monitorias disponibles",
       path: 'Monitorias disponibles'
-    },
-    {
-      text: "Deportes",
-      path: 'Deportes'
     }
   ],
   pqr: [
@@ -39,7 +35,7 @@ export const userModules = {
     },
     {
       text: "Consulta pqrs",
-      path: 'Grades'
+      path: 'Consulta de PQRS'
     },
   ],
 };
