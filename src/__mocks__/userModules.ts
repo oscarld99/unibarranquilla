@@ -26,10 +26,6 @@ export const userModules = {
     {
       text: "Monitorias disponibles",
       path: 'Monitorias disponibles'
-    },
-    {
-      text: "Deportes",
-      path: 'Deportes'
     }
   ],
   pqr: [

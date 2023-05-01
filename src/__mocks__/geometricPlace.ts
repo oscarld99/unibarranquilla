@@ -437,7 +437,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     width: 80
 }, {
     border: true,
-    description: '',
+    description: 'Aula de clases 25',
     floor: 1,
     height: 140,
     isClassRoom: true,
@@ -456,12 +456,12 @@ export const geometricPlaces: IGeometricPlace[] = [{
         sede: 'Barranquilla',
         id: '12_G1_TLM_BQ'
     },
-    id: 'salonxx',
+    id: 'salon25',
     position: {
         x: 470,
         y: 160
     },
-    tittle: 'Salon XX',
+    tittle: 'Salon 25',
     type: 'PLACE',
     width: 60
 }, {
@@ -518,7 +518,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     width: 30
 }, {
     border: true,
-    description: 'Aula de clases N°27',
+    description: 'Aula de clases N°26',
     floor: 1,
     height: 100,
     isClassRoom: true,
@@ -537,12 +537,12 @@ export const geometricPlaces: IGeometricPlace[] = [{
         sede: 'Barranquilla',
         id: '12_G1_TLM_BQ'
     },
-    id: 'salon27',
+    id: 'salon26',
     position: {
         x: 690,
         y: 160
     },
-    tittle: 'Salon 27',
+    tittle: 'Salon 26',
     type: 'PLACE',
     width: 60
 }, {
@@ -586,15 +586,31 @@ export const geometricPlaces: IGeometricPlace[] = [{
     width: 80
 }, {
     border: true,
-    description: '',
+    description: 'Aula de clases Numero 24',
     floor: 1,
     height: 120,
-    id: 'salaX',
+    isClassRoom: true,
+    classRoomState: true,
+    door: {
+        axis: 'x',
+        x: 0,
+        y: 0
+    },
+    activeShedule: {
+        moduleName: 'Teoria de trafico y colas',
+        startTime: '19:00',
+        endTime: '21:59',
+        teacher: 'Marlene Ballesta',
+        salon: 'Lab investigacion',
+        sede: 'Barranquilla',
+        id: '12_G1_TLM_BQ'
+    },
+    id: 'salon24',
     position: {
         x: 400,
         y: 330
     },
-    tittle: 'Sala x',
+    tittle: 'Salon 24',
     type: 'PLACE',
     width: 80
 }, {
@@ -1330,7 +1346,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     tittle: 'Sala de profesores',
     type: 'PLACE',
     width: 100
-},{
+}, {
     border: false,
     description: '',
     floor: 2,
@@ -1343,7 +1359,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     tittle: '',
     type: 'COMMON_AREA',
     width: 50
-},{
+}, {
     border: false,
     description: '',
     floor: 2,
@@ -1356,7 +1372,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     tittle: '',
     type: 'COMMON_AREA',
     width: 50
-},{
+}, {
     border: false,
     description: '',
     floor: 2,
@@ -1369,7 +1385,7 @@ export const geometricPlaces: IGeometricPlace[] = [{
     tittle: '',
     type: 'COMMON_AREA',
     width: 70
-},{
+}, {
     border: false,
     description: '',
     floor: 2,

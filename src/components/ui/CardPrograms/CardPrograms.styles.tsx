@@ -75,11 +75,13 @@ export default StyleSheet.create({
         left: 10
     }, cardPrograms__offer: {
         backgroundColor: COLORS_APP.GRAY,
+        color:COLORS_APP.BLACK,
         height: 30,
         padding: 5,
         width: '100%'
     }, cardPrograms__program: {
         borderBottomColor: COLORS_APP.GRAY,
+        color:COLORS_APP.BLACK,
         borderBottomWidth: 1,
         padding: 5
     }

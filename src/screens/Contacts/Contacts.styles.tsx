@@ -29,6 +29,7 @@ export default StyleSheet.create({
     marginTop: 5,
     gap: 8
   }, contacts__inlineText: {
+    color: COLORS_APP.BLACK,
     fontSize: 16
   }
 });

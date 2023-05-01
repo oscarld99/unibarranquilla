@@ -30,7 +30,7 @@ const FormPQR = () => {
         <ScrollView>
             <View style={styles.form__container}>
                 <View>
-                    <Text>Tipo de solicitud</Text>
+                    <Text style={styles.form__textext}>Tipo de solicitud</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -39,7 +39,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Tipo de documento</Text>
+                    <Text style={styles.form__textext}>Tipo de documento</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -48,7 +48,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Identificación</Text>
+                    <Text style={styles.form__textext}>Identificación</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -57,7 +57,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Dirección</Text>
+                    <Text style={styles.form__textext}>Dirección</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -66,7 +66,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Nombre del remitente o razón social</Text>
+                    <Text style={styles.form__textext}>Nombre del remitente o razón social</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -75,7 +75,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Apellidos o tipo de empresa</Text>
+                    <Text style={styles.form__textext}>Apellidos o tipo de empresa</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -84,7 +84,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Telefono</Text>
+                    <Text style={styles.form__textext}>Telefono</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -93,7 +93,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Email</Text>
+                    <Text style={styles.form__textext}>Email</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='email-address'
@@ -102,7 +102,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Tema de su petición</Text>
+                    <Text style={styles.form__textext}>Tema de su petición</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'
@@ -112,7 +112,7 @@ const FormPQR = () => {
                     />
                 </View>
                 <View>
-                    <Text>Comentario</Text>
+                    <Text style={styles.form__textext}>Comentario</Text>
                     <TextInput
                         style={styles.form__inputText}
                         keyboardType='default'

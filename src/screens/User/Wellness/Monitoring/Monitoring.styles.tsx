@@ -1,13 +1,12 @@
 /* eslint-disable prettier/prettier */
-import { COLORS_APP } from '@Constants/colors';
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     monitoring__container: {
         alignItems: 'center',
-        backgroundColor: COLORS_APP.PRIMARY,
-        borderRadius: 8,
+        gap: 15,
         justifyContent: 'center',
+        padding: 15,
         width: '100%'
     }
 });

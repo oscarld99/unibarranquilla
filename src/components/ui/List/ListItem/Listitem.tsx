@@ -2,11 +2,12 @@
 import { ArrowRight } from '@components/icons'
 import { COLORS_APP } from '@Constants/colors';
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, StyleProp, TextStyle } from 'react-native'
 import styles from '../List.styles'
 
 interface ListItemProps {
   additionalText?: string | number;
+  additionalTextClassName?: StyleProp<TextStyle>;
   icon?: React.ReactElement;
   isLast?: boolean;
   noIcon?: boolean;
@@ -16,6 +17,7 @@ interface ListItemProps {
 
 const ListItem = ({
   additionalText,
+  additionalTextClassName,
   icon,
   text,
   isLast = false,
@@ -37,7 +39,11 @@ const ListItem = ({
         </View>
         <View style={styles.listItem__arrow}>
           {!noIcon && <ArrowRight color={COLORS_APP.BLACK} />}
-          {additionalText && <Text style={styles.listItem__text}>{additionalText}</Text>}
+          {additionalText &&
+            <Text style={additionalTextClassName ? additionalTextClassName : styles.listItem__text}>
+              {additionalText}
+            </Text>
+          }
         </View>
       </TouchableOpacity>
       {!isLast && <View style={styles.listItem__divider} />}

@@ -28,35 +28,35 @@ const ModalLocationDetail = ({
         <View style={styles.location__modalBody}>
           <View style={styles.location__modalBodyInline}>
             <Floor />
-            <Text ><Text style={styles.location__floor} > Piso: </Text>{location.floor}</Text>
+            <Text style={styles.location__text}><Text style={styles.location__floor} > Piso: </Text>{location.floor}</Text>
           </View>
           <View style={styles.location__modalBodyInline}>
             <Info />
-            <Text ><Text style={styles.location__floor} > Descripcion: </Text>{location.description ?? 'N/A'}</Text>
+            <Text style={styles.location__text}><Text style={styles.location__floor} > Descripcion: </Text>{location.description ?? 'N/A'}</Text>
           </View>
           {location.isClassRoom && (
             <View style={{ gap: 10 }}>
               <View style={styles.location__modalBodyInline}>
                 <University />
-                <Text ><Text style={styles.location__floor} > Estado: </Text>{location.classRoomState ? 'En uso' : 'Desocupado'}</Text>
+                <Text style={styles.location__text}><Text style={styles.location__floor} > Estado: </Text>{location.classRoomState ? 'En uso' : 'Desocupado'}</Text>
               </View>
               {
                 location.classRoomState && (
                   <View style={{ gap: 10 }}>
                     <View style={styles.location__modalBodyInline}>
                       <Book />
-                      <Text ><Text style={styles.location__floor} > Modulo:
-                      </Text>
+                      <Text style={styles.location__text}>
+                        <Text style={styles.location__floor} > Modulo:</Text>
                         {`${location?.activeShedule?.moduleName} - ${location?.activeShedule?.id}`}
                       </Text>
                     </View>
                     <View style={styles.location__modalBodyInline}>
                       <Teacher />
-                      <Text ><Text style={styles.location__floor} > Profesor: </Text>{location?.activeShedule?.teacher}</Text>
+                      <Text style={styles.location__text}><Text style={styles.location__floor} > Profesor: </Text>{location?.activeShedule?.teacher}</Text>
                     </View>
                     <View style={styles.location__modalBodyInline}>
                       <Clock />
-                      <Text ><Text style={styles.location__floor} > Hora:
+                      <Text style={styles.location__text}><Text style={styles.location__floor} > Hora:
                       </Text>
                         {`${location?.activeShedule?.startTime} - ${location?.activeShedule?.endTime}`}
                       </Text>
@@ -68,7 +68,7 @@ const ModalLocationDetail = ({
             </View>
           )}
         </View>
-        : <Text>Sin informacion</Text>}
+        : <Text style={styles.location__text}>Sin informacion</Text>}
     </Modal>
   )
 }

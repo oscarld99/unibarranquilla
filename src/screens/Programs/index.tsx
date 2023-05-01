@@ -27,9 +27,6 @@ const Programs = () => {
                     />
                 ))
             }
-            {/* <CardPrograms img={imgTecnologo} text={'Facultad de Ingeniería'} />
-            <CardPrograms img={imgUniversitario} text={'Facultad de Ciencias, Educación, Artes y Humanidades'} />
-            <CardPrograms img={imgTecnico} text={'Facultad de Ciencias Económicas y Administrativas'} /> */}
         </View>
     )
 }

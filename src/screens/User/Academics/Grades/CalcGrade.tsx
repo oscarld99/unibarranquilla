@@ -91,7 +91,7 @@ const CalcGrade = ({
                 </View>
                 <View style={styles.calcGrade__inline}>
                     <Info />
-                    <Text>El tercer corte tiene un valor del 40%</Text>
+                    <Text style={styles.calcGrade__messageText}>El tercer corte tiene un valor del 40%</Text>
                 </View>
 
                 {showMessage && (

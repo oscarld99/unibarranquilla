@@ -26,6 +26,7 @@ export default StyleSheet.create({
         textAlign: 'center',
         width: '30%'
     }, calcGrade__courtText: {
+        color: COLORS_APP.BLACK,
         fontSize: 16,
         fontWeight: '600',
         marginTop: 20
@@ -47,5 +48,7 @@ export default StyleSheet.create({
         fontWeight: '600',
         marginTop: 20,
         textAlign: 'center'
+    }, calcGrade__messageText: {
+        color: COLORS_APP.BLACK,
     }
 });

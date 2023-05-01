@@ -14,6 +14,7 @@ import { Header } from '@components/ui';
 import { AuthContext } from '@contexts/AuthContext';
 import FormPQR from '@screens/User/PQR/FormPQR';
 import { Monitoring, MonitoringAvailible, Sports } from '@screens/User/Wellness';
+import SearchPQR from '@screens/User/PQR/SearchPQR';
 
 const Stack = createNativeStackNavigator();
 
@@ -72,6 +73,9 @@ const AuthStack = () => {
                     <Stack.Screen
                         component={FormPQR}
                         name="Peticiones, Quejas y reclamos" />
+                    <Stack.Screen
+                        component={SearchPQR}
+                        name="Consulta de PQRS" />
                 </Stack.Group>
                 <Stack.Screen
                     component={Login}

@@ -4,6 +4,7 @@ import { Text, TouchableOpacity, View } from "react-native"
 import AutocompleteInput from 'react-native-autocomplete-input';
 import styles from './AutoComplete.styles'
 import { IGeometricPlace } from '@interfaces/data/geometrycPlace.interface';
+import { COLORS_APP } from '@Constants/colors';
 
 interface AutocompleteProps {
     placeHolder: string;
@@ -42,7 +43,7 @@ const Autocomplete = ({
                             onPress={() => handlePress(item)}
                             style={styles.autoComplete__item}
                         >
-                            <Text>{item.tittle}</Text>
+                            <Text style={{color:COLORS_APP.BLACK}}>{item.tittle}</Text>
                         </TouchableOpacity>
                     )
                 }}

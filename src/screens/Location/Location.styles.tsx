@@ -80,5 +80,7 @@ export default StyleSheet.create({
     fontWeight: '600'
   }, location__floorButonTextActive: {
     color: COLORS_APP.WHITE
+  }, location__text: {
+    color: COLORS_APP.BLACK
   }
 });
